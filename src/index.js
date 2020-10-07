@@ -49,7 +49,8 @@ class Game extends React.Component {
         squares: Array(9).fill(null),
       }], 
       stepNumber: 0,
-      xIsNext: true
+      xIsNext: true,
+      isAscending: true
     };
   }
   handleClick(i){
@@ -74,6 +75,10 @@ class Game extends React.Component {
       xIsNext: (step % 2) === 0,
     })
   }
+  sortMoves() {
+    this.setState({isAscending: !this.state.isAscending});
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -97,6 +102,12 @@ class Game extends React.Component {
     } else {
       status = "Сейчас ходит: " + (this.state.xIsNext ? "X" : "O");
     }
+
+    const isAscending = this.state.isAscending;
+    if (!isAscending) {
+      moves.reverse();
+    }
+
     return (
       <div className="game">
         <div className="game-board">
@@ -108,6 +119,9 @@ class Game extends React.Component {
         <div className="game-info">
           <div>{status}</div>
           <ol class = "moves">{moves}</ol>
+          <button onClick={() => this.sortMoves()}>
+          {isAscending ? 'По Убыванию' : 'По возрастанию'}
+          </button>
         </div>
       </div>
     );
