@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Usage
+
+#+BEGIN_SRC sh
+git clone https://github.com/nazlukyanovich/tic-tac-toe-react.git
+cd react-tic-tac-toe
+npm install
+npm start
+#+END_SRC
+
 ## Available Scripts
 
 In the project directory, you can run:
