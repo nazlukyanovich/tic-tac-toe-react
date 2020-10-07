@@ -2,12 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Usage
 
-#+BEGIN_SRC sh
+# BEGIN_SRC sh
 git clone https://github.com/nazlukyanovich/tic-tac-toe-react.git
 cd react-tic-tac-toe
 npm install
 npm start
-#+END_SRC
+# END_SRC
 
 ## Available Scripts
 
